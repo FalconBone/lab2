@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<title>
+    Страница формы
+</title>
+<meta charset = 'utf-8'>
+<link rel='stylesheet' href='style.css' type='text/css'>
+</head>
+<body>
+    <script src='form.js'></script>
+    
+    <form id='form_wrap' action='/form' method='POST' enctype="multipart/form-data">
+        <h1>Форма для аренды недвижимости</h1>
+        <div class="input_block">
+            <span>ФИО</span>
+            <input id="name" name="name">
+        </div>
+        <div class="input_block">
+            <span>Номер телефона</span>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="input_block">
+            <span>Почта </span>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="data_block">
+            <div class="input_block">
+                <span>Дата заселения: </span>
+                <input type="date" id="date_in" name="date_in">
+            </div>
+            <div class="tilda">~</div>
+            <div class="input_block">
+                <span>Дата отъезда </span>
+                <input type="date" id="date_out" name="date_out">
+            </div>
+        </div>
+        <div class="input_block">
+            <span>Количество человек: </span>
+            <input type="number" min="1" max="10" id="human_amount" name="human_amount">
+        </div>
+        <div class="input_block checkbox">
+            <span>С животными? </span>
+            <input type="checkbox" id="with_animals" name="with_animals">Да
+        </div>
+        <div class="input_block">
+            <span>Тип оплаты </span>
+            <select class='text_input' id="pay_type" name="pay_type">
+                <option value="1">Картой</option>
+                <option value="2">Наличными</option>
+                <option value="3">Онлайн</option>
+            </select>
+        </div>
+        <div class="input_block">
+            <span>Есть дети младше 6? </span>
+            <div>
+                <input name="with_children" type="radio" id="with_children1" value="нет" checked>нет
+                <input name="with_children" type="radio" id="with_children2" value="да">да
+            </div>
+        </div>
+        <div class="input_block" >
+            <span>Комментарий</span>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+        <button>Отправить</button>
+    </form>
+
+</body>
